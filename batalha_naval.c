@@ -21,10 +21,6 @@ void apply_skill_on_board(int board[BOARD_SIZE][BOARD_SIZE], const int skill_mat
 
 void display_board(const int board[BOARD_SIZE][BOARD_SIZE]);
 
-
-/**
- * @brief
- */
 int main(void) {
     int board[BOARD_SIZE][BOARD_SIZE];
     int skill_matrix[SKILL_MATRIX_SIZE][SKILL_MATRIX_SIZE];
@@ -56,9 +52,6 @@ int main(void) {
     return EXIT_SUCCESS;
 }
 
-/**
- * @brief 
- */
 void generate_cone_skill(int matrix[SKILL_MATRIX_SIZE][SKILL_MATRIX_SIZE], int size) {
     memset(matrix, 0, size * size * sizeof(int));
     int center_col = size / 2;
@@ -71,9 +64,6 @@ void generate_cone_skill(int matrix[SKILL_MATRIX_SIZE][SKILL_MATRIX_SIZE], int s
     }
 }
 
-/**
- * @brief
- */
 void generate_cross_skill(int matrix[SKILL_MATRIX_SIZE][SKILL_MATRIX_SIZE], int size) {
     memset(matrix, 0, size * size * sizeof(int));
     int center = size / 2;
@@ -86,9 +76,6 @@ void generate_cross_skill(int matrix[SKILL_MATRIX_SIZE][SKILL_MATRIX_SIZE], int 
     }
 }
 
-/**
- * @brief 
- */
 void generate_octahedron_skill(int matrix[SKILL_MATRIX_SIZE][SKILL_MATRIX_SIZE], int size) {
     memset(matrix, 0, size * size * sizeof(int));
     int center = size / 2;
@@ -101,11 +88,6 @@ void generate_octahedron_skill(int matrix[SKILL_MATRIX_SIZE][SKILL_MATRIX_SIZE],
     }
 }
 
-/**
- * @brief 
- * @param origin_r 
- * @param origin_c 
- */
 void apply_skill_on_board(int board[BOARD_SIZE][BOARD_SIZE], const int skill_matrix[SKILL_MATRIX_SIZE][SKILL_MATRIX_SIZE], int skill_size, int origin_r, int origin_c) {
     int skill_center = skill_size / 2;
 
